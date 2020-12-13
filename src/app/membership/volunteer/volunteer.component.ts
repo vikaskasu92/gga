@@ -27,6 +27,7 @@ export class VolunteerComponent implements OnInit {
       'interestHobbies': new FormControl(null,[Validators.required]),
       'country': new FormControl("USA",[Validators.required]),
       'state': new FormControl(null,[Validators.required]),
+      'city': new FormControl(null,[Validators.required]),
       'zip': new FormControl(null,[Validators.required])
     });
     this.volunteerForm.controls.country.disable();
@@ -44,6 +45,7 @@ export class VolunteerComponent implements OnInit {
       volunteerRequest.interestHobbies = this.volunteerForm.controls.interestHobbies.value;
       volunteerRequest.country = this.volunteerForm.controls.country.value;
       volunteerRequest.state = this.volunteerForm.controls.state.value;
+      volunteerRequest.city = this.volunteerForm.controls.city.value;
       volunteerRequest.zip = this.volunteerForm.controls.zip.value;
       this.memberService.registerVolunteer(volunteerRequest).subscribe( () => {
         this.toastCtrl.create({

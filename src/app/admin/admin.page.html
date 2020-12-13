@@ -155,6 +155,11 @@
           <td mat-cell *matCellDef="let row" class="border"> {{row.state}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> City </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.city}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="zip">
           <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Zip </th>
           <td mat-cell *matCellDef="let row" class="border"> {{row.zip}} </td>
@@ -234,6 +239,11 @@
         <ng-container matColumnDef="state">
           <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> State </th>
           <td mat-cell *matCellDef="let row" class="border"> {{row.state}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="city">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> City </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.city}} </td>
         </ng-container>
 
         <ng-container matColumnDef="zip">

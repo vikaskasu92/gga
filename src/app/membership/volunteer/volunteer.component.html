@@ -138,12 +138,31 @@
         </ion-col>
         <ion-col size="4">
           <mat-form-field class="form-field">
+            <mat-label>City</mat-label>
+            <input matInput formControlName="city" required>
+            <mat-error *ngIf="!volunteerForm.get('city').valid && volunteerForm.get('city').touched">
+              Please enter a city name
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
             <mat-label>Zip</mat-label>
             <input matInput formControlName="zip" maxlength="5" pattern="^(0|[1-9][0-9]*)$" required>
             <mat-error *ngIf="!volunteerForm.get('zip').valid && volunteerForm.get('zip').touched">
               Please enter a valid zip
             </mat-error>
           </mat-form-field>
+        </ion-col>
+        <ion-col size="4">
+
+        </ion-col>
+        <ion-col size="4">
+
         </ion-col>
       </ion-row>
     </ion-grid>

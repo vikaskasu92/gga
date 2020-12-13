@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit {
       'addressline2': new FormControl(null),
       'country': new FormControl("USA",[Validators.required]),
       'state': new FormControl(null,[Validators.required]),
+      'city': new FormControl(null,[Validators.required]),
       'zip': new FormControl(null,[Validators.required])
     });
     this.registerForm.controls.country.disable();
@@ -48,6 +49,7 @@ export class RegisterComponent implements OnInit {
       registerRequest.addressline2 = this.registerForm.controls.addressline2.value;
       registerRequest.country = this.registerForm.controls.country.value;
       registerRequest.state = this.registerForm.controls.state.value;
+      registerRequest.city = this.registerForm.controls.city.value;
       registerRequest.zip = this.registerForm.controls.zip.value;
       this.memberService.registerMember(registerRequest).subscribe( () => {
         this.toastCtrl.create({

@@ -21,6 +21,7 @@ interface Membership {
   addressline2:string,
   country:string,
   state:string,
+  city:string,
   zip:string
 }
 
@@ -34,6 +35,7 @@ interface Volunteer {
   interestHobbies:string,
   country:string,
   state:string,
+  city:string,
   zip:string
 }
 
@@ -83,7 +85,7 @@ export class AdminService {
         const members = [];
         for(const key in resData){
           if(resData.hasOwnProperty(key)){
-            members.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,addressline1:resData[key].addressline1,addressline2:resData[key].addressline2,country:resData[key].country,state:resData[key].state,zip:resData[key].zip});
+            members.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,addressline1:resData[key].addressline1,addressline2:resData[key].addressline2,country:resData[key].country,state:resData[key].state,city:resData[key].city,zip:resData[key].zip});
           }
         }
         console.log(members);
@@ -99,7 +101,7 @@ export class AdminService {
         const volunteers = [];
         for(const key in resData){
           if(resData.hasOwnProperty(key)){
-            volunteers.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,country:resData[key].country,state:resData[key].state,zip:resData[key].zip});
+            volunteers.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,country:resData[key].country,state:resData[key].state,city:resData[key].city,zip:resData[key].zip});
           }
         }
         console.log(volunteers);
