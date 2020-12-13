@@ -12,6 +12,7 @@
 .nav{
   &-header{
     color: white;
+    font-size: 16px;  
     cursor: pointer;
   }
 }
@@ -36,13 +37,13 @@
   }
   
   .dropdown:hover .dropbtn {
-    background-color: #F77B00;
+    background-color: #F6A52F;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #F77B00;
+    background-color: #F6A52F;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
