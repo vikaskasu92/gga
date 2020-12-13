@@ -1,0 +1,41 @@
+.card-heading{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,rgba(244,107,69, 0.8) , rgba(238,168,73,.8));
+    font-size: 1.6rem;
+}
+
+.paragraph{
+    font-size: 1rem;
+}
+
+.top-card{
+    margin: 1.2rem;
+    margin-top: 3rem;
+}
+
+.middle-card{
+    margin: 1.2rem;
+}
+
+.card-adjust{
+    margin-right: 4rem !important;
+    margin-left: 4rem !important;
+}
+
+.charity-images{
+    margin-left: 5rem;
+    height: 35vh;
+    border-radius: 1rem;
+    width: 78%;
+}
+
+.col-padding{
+    padding-top: 3rem;
+}
+
+.bottom-card{
+    margin: 1.2rem;
+    margin-bottom:2rem;
+}

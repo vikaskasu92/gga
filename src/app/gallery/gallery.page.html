@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<ion-content>
+
+  <ion-item lines="none" class="ion-padding-start ion-padding-top">
+    <ion-text color="primary" class="card-heading">Photos</ion-text>
+  </ion-item>
+
+  <ion-grid>
+  <ion-row>
+    <ion-col size="12">
+      <ion-slides pager="true" [options]="slideOpts" class="slides" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+        <ion-slide>
+          <img src='../assets/images/gallery1.png' alt="photo1">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery11.png' alt="photo11">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery2.png' alt="photo2">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery3.png' alt="photo3">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery4.png' alt="photo4">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery5.png' alt="photo5">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery6.png' alt="photo6">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery7.png' alt="photo7">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery8.png' alt="photo8">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery9.png' alt="photo9">
+        </ion-slide>
+        <ion-slide>
+          <img src='../assets/images/gallery10.png' alt="photo10">
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-item lines="none" class="ion-padding-start ion-padding-top">
+  <ion-text color="primary" class="card-heading">Videos</ion-text>
+</ion-item>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="4">
+      <iframe class="videos" height="315"  src="https://www.youtube.com/embed/jeEnHUB3KKI" frameborder="0" allowfullscreen></iframe>
+    </ion-col>
+    <ion-col size="4">
+      <iframe class="videos" height="315"  src="https://www.youtube.com/embed/JI2wVVrtOHA" frameborder="0" allowfullscreen></iframe>
+    </ion-col>
+    <ion-col size="4">
+      <iframe class="videos" height="315"  src="https://www.youtube.com/embed/DXycvmF9a84" frameborder="0" allowfullscreen></iframe>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  <app-footer></app-footer>
+</ion-content>

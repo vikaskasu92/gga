@@ -1,0 +1,88 @@
+.card-heading{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,rgba(244,107,69, 0.8) , rgba(238,168,73,.8));
+    font-size: 1.6rem;
+}
+
+.hero{
+    height: 85vh;
+    background-image:url('../../assets/images/hero.jpg');
+    background-position: bottom;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+    margin-right: .2rem;
+    margin-left: .2rem;
+}
+
+.nayak-image{
+    height: 26vh;
+    width: 21vw;
+}
+
+.card-adjust{
+    margin-right: 4rem !important;
+    margin-left: 4rem !important;
+}
+
+.noncard-adjust{
+    margin-right: 2.9rem !important;
+    margin-left: 2.9rem !important;
+}
+
+.bottom-card{
+    margin: 1.2rem;
+    margin-bottom:2rem;
+}
+
+.padding{
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+
+.paragraph{
+    font-size: 1rem;
+}
+
+.thumbnail-logo{
+    height: 25vh;
+    width: auto;
+}
+
+.card-photo{
+    height: 44vh;
+    width: 100%;
+
+    &-title{
+        cursor: pointer;
+    }
+}
+
+.more-news{
+    display: inline-block;
+    padding-top: .65rem;
+    padding-right: 1rem;
+
+    &-detail{
+        color: black;
+        text-decoration: underline;
+    }
+
+    &:hover{
+        color: #F6A52F;
+    }
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.top-card{
+    margin: 1.2rem;
+    margin-top: 3rem;
+}
+
+.middle-card{
+    margin: 1.2rem;
+}

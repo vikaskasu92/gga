@@ -1,0 +1,24 @@
+.card-heading{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,rgba(244,107,69, 0.8) , rgba(238,168,73,.8));
+    font-size: 1.6rem;
+    margin-left: 4rem !important;
+}
+
+.text-header-background{
+    --background:#F6A52F;
+}
+
+.fab-button{
+    --background:#F6A52F;
+}
+
+.date{
+    font-size: 1rem;
+}
+
+ion-card-header{
+    padding: .2rem;
+}

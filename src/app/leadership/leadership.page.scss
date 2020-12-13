@@ -1,0 +1,21 @@
+.card-heading{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,rgba(244,107,69, 0.8) , rgba(238,168,73,.8));
+    font-size: 1.6rem;
+}
+
+
+.main-card{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+.leader-image{
+    width: 100%;
+}
+
+.card-bottom{
+    margin-bottom:2rem;
+}

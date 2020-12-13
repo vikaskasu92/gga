@@ -1,0 +1,46 @@
+
+.form-field{
+    width: 50vw;
+}
+
+.card-heading{
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right,rgba(244,107,69, 0.8) , rgba(238,168,73,.8));
+    font-size: 1.6rem;
+}
+
+.values-col{
+    border: 1px solid #D7D7D7;
+    margin-top: 1rem;
+    margin-top: 0;
+
+    &-even{
+        background:white;
+    }
+
+    &-odd{
+        background:#FBFBFB;
+    }
+
+    &-first{
+        margin-top: 1rem;
+    }
+}
+
+.key-col{
+    padding-top: 1rem;
+}
+
+ion-card{
+    margin-right: 4rem;
+    margin-left: 4rem;
+}
+
+.bottom-card{
+    margin-right: 4rem !important;
+    margin-left: 4rem !important;
+    margin: 1.2rem;
+    margin-bottom:2rem;
+}

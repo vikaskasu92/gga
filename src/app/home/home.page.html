@@ -1,0 +1,113 @@
+<ion-content>
+  <app-header></app-header>
+<div class="hero">
+</div>
+<ion-card class="top-card card-adjust">
+  <ion-card-header class="ion-padding-start">
+    <ion-card-title class="ion-padding-start">
+      <ion-text color="primary" class="card-heading">Welcome to Global Gors Association (GGA)</ion-text>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="padding ion-text-justify">
+    <ion-text class="paragraph">
+      GLOBAL GORS ASSOCIATION(GGA) is to provide a platform for all the like-minded,
+      passionate and committed people who understand and share the culture, heritage and
+      values of Gor community, to participate in its socio-economic development. Preserve,
+      maintain, and perpetuate the cultural heritage of Gor community in US and abroad.
+      Collaborate with other organizations across the globe to promote the cultural, literacy,
+      educational and charitable interests of Gor community. Foster friendship and understanding
+      among Gor community. Raise, solicit, collect, and disburse funds, charities, and donations
+      for cultural, educational, and charitable purposes either directly or in cooperation with other
+      not-for-profit organizations in the US and abroad.
+    </ion-text>
+  </ion-card-content>
+</ion-card>
+<ion-card class="middle-card card-adjust">
+  <ion-card-header class="ion-padding-start">
+    <ion-card-title class="ion-padding-start">
+      <ion-text color="primary" class="card-heading">Nayak's Message</ion-text>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+            <ion-img class="nayak-image" [src]="'../assets/images/Nayak.png'"></ion-img>
+        </ion-col>
+        <ion-col size="9" class="ion-text-justify">
+          <ion-text class="paragraph">I am delighted to welcome you to Teez festival event 2019 in Bloomington. Culture forms the core of a people’s being and the essence of their existence. Our cultural heritage keeps our memories alive of how beliefs and cultural expressions have contributed to the development of family and society. GORS aims to nurture and support this community, recognizing that any guar can be a part of it, whether their engagement with culture is through festivals, cultural activities or family gatherings to retain unique identity of our culture for future generation to cherish and enjoy.</ion-text>
+          <ion-row>
+            <ion-col size="12" class="ion-text-right">
+              <ion-card-subtitle class="ion-padding-start"><ion-text>- Dr Dayanand Naik</ion-text></ion-card-subtitle>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-content>
+</ion-card>
+<ion-grid class="noncard-adjust">
+  <ion-row>
+    <ion-col size="4">
+      <ion-card>
+        <ion-card-header>
+          <img class="card-photo" src="../assets/images/village-1.jpg" alt="village photo">
+        </ion-card-header>
+        <ion-card-content class="ion-text-center">
+          <ion-card-title>
+            <ion-button color="secondary" (click)="navigateTo('charity')">
+              <ion-text >Adopt a village</ion-text>
+            </ion-button>
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <ion-card-header>
+          <img class="card-photo" src="../assets/images/student-1.jpg" alt="student photo">
+        </ion-card-header>
+        <ion-card-content class="ion-text-center">
+          <ion-card-title>
+            <ion-button color="secondary" (click)="navigateTo('charity')">
+              <ion-text>Adopt a student</ion-text>
+            </ion-button>
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <ion-card-header>
+          <img class="card-photo" src="../assets/images/funds-1.jpg" alt="Funds photo">
+        </ion-card-header>
+        <ion-card-content class="ion-text-center">
+          <ion-card-title>
+            <ion-button color="secondary" (click)="navigateTo('charity')">
+              <ion-text>Donate</ion-text>
+            </ion-button>
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-card class="bottom-card card-adjust">
+  <ion-card-header>
+    <ion-card-title>
+      <ion-text color="primary" class="card-heading">Latest News</ion-text>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list *ngFor="let news of newsArray">
+      <ion-item class="ion-padding-bottom">
+        <ion-text> {{news.description}} </ion-text>
+      </ion-item>
+    </ion-list>
+    <ion-item lines="none">
+       <ion-button slot="end" color="secondary" (click)="moreNews()">More News</ion-button>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+<app-footer></app-footer>
+</ion-content>

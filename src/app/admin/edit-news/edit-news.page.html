@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Title</ion-label>
+          <ion-input type="text" required value="{{title}}"  (ionChange)="titleChanged($event)"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Description</ion-label>
+          <ion-textarea rows="6" cols="20" required value="{{description}}" (ionChange)="descriptionChanged($event)"></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating">Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="{{date}}" value="{{date}}"  (ionChange)="dateChanged($event)"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center ion-padding-top">
+        <ion-button (click)="saveEditedNews()">Save &nbsp;<ion-icon name="save-outline"></ion-icon></ion-button>
+        <ion-button color="secondary" (click)="cancelEdit()" >Cancel</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

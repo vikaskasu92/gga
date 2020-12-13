@@ -1,0 +1,266 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" color="primary"  value="add">
+    <ion-segment-button value="add">
+      <ion-label>Add News</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="manage">
+      <ion-label>Manage News</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="volunteers">
+      <ion-label>Volunteers</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="members">
+      <ion-label>Members</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="addNews">
+    <form [formGroup]="addNewsForm">
+      <ion-grid class="ion-margin-top">
+        <ion-row>
+          <ion-col size="8" offset="2">
+            <ion-item >
+              <ion-label position="floating">News Title</ion-label>
+              <ion-input type="text" formControlName="title"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="8" offset="2">
+            <ion-item >
+              <ion-label position="floating">News Description</ion-label>
+              <ion-textarea rows="6" cols="20" formControlName="description"></ion-textarea>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+        <ion-col size="8" offset="2">
+          <ion-item>
+            <ion-label position="floating">MM/DD/YYYY</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" max="{{today}}" formControlName="date"></ion-datetime>
+          </ion-item>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="ion-padding-top">
+        <ion-row>
+          <ion-col offset="8">
+            <ion-button color="secondary" (click)="addNewsToDB()">Submit</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+  <div *ngIf="manageNews">
+    <div *ngIf="spinner" class="spinner">
+      <ion-spinner name="dots"></ion-spinner>
+    </div>
+    <div *ngIf="!noNews && !spinner; else noNewsAvailable">
+      <ion-grid class="ion-margin-top">
+        <ion-row class="row-design">
+          <ion-col size="2" offset="1" >
+              <ion-text>Date</ion-text>
+          </ion-col>
+          <ion-col size="2" class="ion-text-center">
+              <ion-text>Title</ion-text>
+          </ion-col>
+          <ion-col size="5" class="ion-text-center">
+              <ion-text>Description</ion-text>
+          </ion-col>
+          <ion-col size="2">
+              <ion-text>Action</ion-text>
+          </ion-col>
+          <hr>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row *ngFor="let news of newsArray" >
+          <ion-col size="2" offset="1">
+            <ion-item lines="none">
+              <ion-text>{{news.date | dateFetch }}</ion-text>
+            </ion-item>
+          </ion-col>
+          <ion-col size="2">
+            <ion-item lines="none">
+              <ion-text>{{news.title}}</ion-text>
+            </ion-item>
+          </ion-col>
+          <ion-col size="5">
+            <ion-item lines="none">
+              <ion-text>{{news.description}}</ion-text>
+            </ion-item>
+          </ion-col>
+          <ion-col size="2">
+            <ion-button (click)="deleteNews(news.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+            <ion-button (click)="editNews(news.id,news.title,news.description,news.date)"><ion-icon name="create-outline"></ion-icon></ion-button>
+          </ion-col>
+          <hr class="hr-divider">
+        </ion-row>
+      </ion-grid>
+    </div>
+    <ng-template #noNewsAvailable>
+      <ion-grid class="ion-margin-top">
+        <ion-row>
+          <ion-col size="8" offset="2" class="ion-text-center">
+            <ion-card class="no-news-card">
+              <ion-card-title>No news available to show</ion-card-title>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ng-template>
+  </div>
+  <div *ngIf="volunteers">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyVolunteerFilter($event)" placeholder="Ex. Volunteer Name" #input>
+    </mat-form-field>
+    
+    <div class="mat-elevation-z8 table-display">
+      <table mat-table [dataSource]="volunteerSource" matSort>
+    
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Title </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.title}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> First Name </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.firstName}}% </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Last Name </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.lastName}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Email </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Phone </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.phone}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Country </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.country}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> State </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.state}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="zip">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Zip </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.zip}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="interestHobbies">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Interest / Hobbies </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.interestHobbies}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="profession">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Profession </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.profession}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsVolunteers"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsVolunteers;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+  <div *ngIf="members">
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyMemberFilter($event)" placeholder="Ex. Member Name" #input>
+    </mat-form-field>
+    
+    <div class="mat-elevation-z8 table-display">
+      <table mat-table [dataSource]=" memberSource" matSort>
+    
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Title </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.title}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> First Name </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.firstName}}% </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Last Name </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.lastName}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Email </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Phone </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.phone}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="addressline1">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Address Line 1 </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.addressline1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="addressline2">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Address Line 2 </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.addressline2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Country </th>
+          <td mat-cell *matCellDef="let row" class="border" > {{row.country}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> State </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.state}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="zip">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Zip </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.zip}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="interestHobbies">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Interest / Hobbies </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.interestHobbies}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="profession">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Profession </th>
+          <td mat-cell *matCellDef="let row" class="border"> {{row.profession}} </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsMembers"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsMembers;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    </div>
+  </div>
+</ion-content>

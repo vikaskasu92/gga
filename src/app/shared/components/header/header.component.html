@@ -1,0 +1,63 @@
+
+    <ion-grid class="ion-no-margin header">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="1" class="ion-text-center">
+          <img class="logo" src="../assets/images/logo.jpg">
+        </ion-col>
+        <ion-col size="10" class="navbar-menu">
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col class="ion-text-center nav-header"  (click)="navigateTo('home')">
+                <ion-text>Home</ion-text>
+              </ion-col>
+              <ion-col class="ion-text-center navbar-menu-decoration navbar-menu-item" >
+                <div class="dropdown">
+                  <button class="dropbtn">About 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a (click)="navigateTo('about')">About GGA</a>
+                    <a (click)="navigateTo('leadership')">Leadership</a>
+                  </div>
+                </div> 
+              </ion-col>
+              <ion-col  class="ion-text-center nav-header"  (click)="navigateTo('news')">
+                <ion-text>News & Events</ion-text>
+              </ion-col>
+              <ion-col  class="ion-text-center nav-header" (click)="navigateTo('gallery')">
+                <ion-text>Gallery</ion-text>
+              </ion-col>
+              <ion-col  class="ion-text-center navbar-menu-decoration navbar-menu-item" >
+                <div class="dropdown">
+                  <button class="dropbtn">History 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a (click)="navigateTo('history')">GGA History</a>
+                    <a (click)="navigateTo('history/gothras')">Gothras</a>
+                    <a (click)="navigateTo('history/festivals')">Festivals</a>
+                  </div>
+                </div> 
+              </ion-col>
+              <ion-col  class="ion-text-center navbar-menu-decoration navbar-menu-item">
+                <div class="dropdown">
+                  <button class="dropbtn">Member 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a (click)="navigateTo('membership')">GGA Membership</a>
+                    <a (click)="navigateTo('charity')">Donate</a>
+                  </div>
+                </div> 
+              </ion-col>
+              <ion-col  class="ion-text-center nav-header"  (click)="navigateTo('contact')">
+                <ion-text>Contact</ion-text>
+              </ion-col>
+              <ion-col  class="ion-text-center nav-header" >
+                <ion-button color="secondary" (click)="checkForLogin()">Admin</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+    </ion-grid>

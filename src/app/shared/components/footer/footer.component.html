@@ -1,0 +1,104 @@
+<ion-card color="dark" class="footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="footer-coloum">
+          <ion-row>
+            <ion-col class="ion-padding-bottom">
+              <ion-text class="footer-heading">OFFICE HOURS</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-padding-bottom">
+              <ion-text>Mon-Fri : 10.00am – 8.00pm</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="ion-padding-bottom">
+              <ion-text>Sat : 10.00am – 2.00pm</ion-text>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-text>Sun : Closed</ion-text>
+            </ion-col>
+          </ion-row>
+      </ion-col>
+      <ion-col size="3"  class="footer-coloum">
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="footer-heading">CONTACT US</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-icon name="call-outline"></ion-icon>&nbsp;
+            <ion-text>+1 973 462 6405</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-icon name="mail-outline"></ion-icon>&nbsp;
+            <ion-text>contactourgga@gmail.com</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-icon name="location-outline"></ion-icon>&nbsp;
+            <ion-text>10910, Wardrop Pl,</ion-text><br><ion-text class="inner-padding">Richmond, TX – 77407 USA</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="3" class="footer-coloum">
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="footer-heading">FOLLOW US</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-icon name="logo-facebook"></ion-icon>&nbsp;
+            <ion-text class="clickable" (click)="goToFaceBook()">Facebook</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-icon name="logo-youtube"></ion-icon>&nbsp;
+            <ion-text class="clickable" (click)="goToYoutube()">Youtube</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="3" class="footer-coloum">
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="footer-heading">QUICK LINKS</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="clickable" (click)="footerNavigate('home')">Home</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="clickable" (click)="footerNavigate('about')">About</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="clickable" (click)="footerNavigate('news')">News</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="clickable" (click)="checkForLogin()">Admin</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding-bottom">
+            <ion-text class="clickable" (click)="footerNavigate('contact')">Contact</ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

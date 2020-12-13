@@ -1,0 +1,195 @@
+<ion-header class="ion-text-center ion-padding">
+  <ion-title>Register with GGA</ion-title>
+</ion-header>
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
+            <mat-label>Title</mat-label>
+            <mat-select formControlName="title" required>
+              <mat-option value="mr">Mr.</mat-option>
+              <mat-option value="mr">Mrs.</mat-option>
+              <mat-option value="mr">Ms.</mat-option>
+              <mat-option value="mr">Miss.</mat-option>
+              <mat-option value="mr">Dr.</mat-option>
+            </mat-select>
+            <mat-error *ngIf="!registerForm.get('title').valid && registerForm.get('title').touched">
+              Please select a Title
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required>
+            <mat-error *ngIf="!registerForm.get('firstName').valid && registerForm.get('firstName').touched">
+              Please enter a First Name
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="4">
+          <mat-form-field class="form-field" >
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required>
+            <mat-error *ngIf="!registerForm.get('lastName').valid && registerForm.get('lastName').touched">
+              Please enter a Last Name
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">
+              Please enter a valid email address
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" formControlName="phone" maxlength="10" pattern="^(0|[1-9][0-9]*)$" required>
+            <mat-error *ngIf="!registerForm.get('phone').valid && registerForm.get('phone').touched">
+              Please enter a phone number
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Address line 1</mat-label>
+            <input matInput formControlName="addressline1" required>
+            <mat-error *ngIf="!registerForm.get('addressline1').valid && registerForm.get('addressline1').touched">
+              Please enter address
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Address line 2</mat-label>
+            <input matInput formControlName="addressline2" >
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
+            <mat-label>Country</mat-label>
+            <input matInput formControlName="country" value="USA" required>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
+            <mat-label>State</mat-label>
+            <mat-select formControlName="state" required>
+              <mat-option value="alabama">Alabama</mat-option>
+              <mat-option value="alaska">Alaska</mat-option>
+              <mat-option value="arizona">Arizona</mat-option>
+              <mat-option value="arkansas">Arkansas</mat-option>
+              <mat-option value="california">California</mat-option>
+              <mat-option value="colorado">Colorado</mat-option>
+              <mat-option value="connecticut">Connecticut</mat-option>
+              <mat-option value="delaware">Delaware</mat-option>
+              <mat-option value="florida">Florida</mat-option>
+              <mat-option value="georgia">Georgia</mat-option>
+              <mat-option value="hawaii">Hawaii</mat-option>
+              <mat-option value="idaho">Idaho</mat-option>
+              <mat-option value="illinois">Illinois</mat-option>
+              <mat-option value="indiana">Indiana</mat-option>
+              <mat-option value="iowa">Iowa</mat-option>
+              <mat-option value="kansas">Kansas</mat-option>
+              <mat-option value="kentucky">Kentucky</mat-option>
+              <mat-option value="louisiana">Louisiana</mat-option>
+              <mat-option value="maine">Maine</mat-option>
+              <mat-option value="maryland">Maryland</mat-option>
+              <mat-option value="massachusetts">Massachusetts</mat-option>
+              <mat-option value="michigan">Michigan</mat-option>
+              <mat-option value="minnesota">Minnesota</mat-option>
+              <mat-option value="mississippi">Mississippi</mat-option>
+              <mat-option value="missouri">Missouri</mat-option>
+              <mat-option value="montana">Montana</mat-option>
+              <mat-option value="nebraska">Nebraska</mat-option>
+              <mat-option value="nevada">Nevada</mat-option>
+              <mat-option value="newHampshire">New Hampshire</mat-option>
+              <mat-option value="newJersey">New Jersey</mat-option>
+              <mat-option value="newMexico">New Mexico</mat-option>
+              <mat-option value="newYork">New York</mat-option>
+              <mat-option value="northCarolina">North Carolina</mat-option>
+              <mat-option value="northDakota">North Dakota</mat-option>
+              <mat-option value="ohio">Ohio</mat-option>
+              <mat-option value="oklahoma">Oklahoma</mat-option>
+              <mat-option value="oregon">Oregon</mat-option>
+              <mat-option value="pennsylvania">Pennsylvania</mat-option>
+              <mat-option value="rhodeIsland">Rhode Island</mat-option>
+              <mat-option value="southCarolina">South Carolina</mat-option>
+              <mat-option value="southDakota">South Dakota</mat-option>
+              <mat-option value="tennessee">Tennessee</mat-option>
+              <mat-option value="texas">Texas</mat-option>
+              <mat-option value="utah">Utah</mat-option>
+              <mat-option value="vermont">Vermont</mat-option>
+              <mat-option value="virginia">Virginia</mat-option>
+              <mat-option value="washington">Washington</mat-option>
+              <mat-option value="westVirginia">West Virginia</mat-option>
+              <mat-option value="wisconsin">Wisconsin</mat-option>
+              <mat-option value="wyoming">Wyoming</mat-option>
+              <mat-option value="districtOfColumbia">District of Columbia</mat-option>
+            </mat-select>
+            <mat-error *ngIf="!registerForm.get('state').valid && registerForm.get('state').touched">
+              Please select a state
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="4">
+          <mat-form-field class="form-field">
+            <mat-label>Zip</mat-label>
+            <input matInput formControlName="zip" maxlength="5" pattern="^(0|[1-9][0-9]*)$" required>
+            <mat-error *ngIf="!registerForm.get('zip').valid && registerForm.get('zip').touched">
+              Please enter a valid zip
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Interest /Hobbies</mat-label>
+            <input matInput formControlName="interestHobbies" required>
+            <mat-error *ngIf="!registerForm.get('interestHobbies').valid && registerForm.get('interestHobbies').touched">
+              Please enter a interestHobbies
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+        <ion-col size="6">
+          <mat-form-field class="form-field">
+            <mat-label>Profession</mat-label>
+            <input matInput formControlName="profession" required>
+            <mat-error *ngIf="!registerForm.get('profession').valid && registerForm.get('profession').touched">
+              Please enter a profession
+            </mat-error>
+          </mat-form-field>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="ion-text-center">
+      <ion-row class="ion-text-center">
+        <ion-col size="12">
+          <ion-button type="submit" color="primary">Register</ion-button>
+          <a class="cancel-link" (click)="closeRegister()">Cancel</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

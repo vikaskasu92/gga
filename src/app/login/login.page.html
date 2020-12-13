@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="closeLogin()"><ion-icon name="close-outline" size="large"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <form [formGroup]="loginForm">
+      <ion-row class="adjust-row">
+        <ion-col size="8" offset="2">
+          <div *ngIf="invalidLogin" class="invalid-login ion-text-center">
+            <ng-container *ngFor="let validation of validation_messages.invalidCredentials">
+                {{ validation.message }}
+            </ng-container>
+          </div>
+          <ion-item>
+            <ion-label position="floating">Username</ion-label>
+            <ion-input type="text" formControlName="username" required></ion-input>
+          </ion-item>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.username">
+              <div *ngIf="loginForm.get('username').hasError(validation.type) && (loginForm.get('username').dirty || loginForm.get('username').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password" required></ion-input>
+          </ion-item>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.password">
+              <div *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8" offset="2">
+          <ion-button color="primary" expand="block" (click)="login()">
+            Login
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="8" offset="2" class="ion-text-center">
+          <a href="#" (click)="forgotPassword($event)">Forgot Password?</a>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
