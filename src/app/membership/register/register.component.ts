@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     if(this.registerForm.valid){
       let registerRequest:any = {};
       registerRequest.title = this.registerForm.controls.title.value;
-      registerRequest.firstName = this.registerForm.controls.title.value;
+      registerRequest.firstName = this.registerForm.controls.firstName.value;
       registerRequest.lastName = this.registerForm.controls.lastName.value;
       registerRequest.email = this.registerForm.controls.email.value;
       registerRequest.phone = this.registerForm.controls.phone.value;
