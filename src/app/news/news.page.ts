@@ -14,7 +14,12 @@ export class NewsPage implements OnInit {
 
   ngOnInit() {
     this.adminService.fetchNews().subscribe( resData => {
-      this.newsArray = resData;
+      let sortedNews:any = resData.sort((a,b) => {
+        if (a.date > b.date) return -1;
+        if (a.date < b.date) return 1;
+        return 0;
+      });
+      this.newsArray = sortedNews;
     });
   }
 
