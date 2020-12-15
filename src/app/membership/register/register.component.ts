@@ -18,19 +18,19 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = new FormGroup({
-      'title': new FormControl(null,[Validators.required]),
+      'title': new FormControl(null),
       'firstName': new FormControl(null,[Validators.required]),
       'lastName': new FormControl(null,[Validators.required]),
       'email': new FormControl(null,[Validators.email]),
       'phone': new FormControl(null,[Validators.required]),
-      'profession': new FormControl(null,[Validators.required]),
-      'interestHobbies': new FormControl(null,[Validators.required]),
-      'addressline1': new FormControl(null,[Validators.required]),
+      'profession': new FormControl(null),
+      'interestHobbies': new FormControl(null),
+      'addressline1': new FormControl(null),
       'addressline2': new FormControl(null),
-      'country': new FormControl("USA",[Validators.required]),
-      'state': new FormControl(null,[Validators.required]),
-      'city': new FormControl(null,[Validators.required]),
-      'zip': new FormControl(null,[Validators.required])
+      'country': new FormControl("USA"),
+      'state': new FormControl(null),
+      'city': new FormControl(null),
+      'zip': new FormControl(null)
     });
     this.registerForm.controls.country.disable();
   }
