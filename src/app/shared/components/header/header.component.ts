@@ -23,5 +23,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigateByUrl('/admin');
   }
 
+  donate(){
+    window.open("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NAV4UMWXAA4B4&source=url","_blank");
+  }
+
 
 }

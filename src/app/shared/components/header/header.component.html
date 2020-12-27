@@ -1,10 +1,10 @@
 
     <ion-grid class="ion-no-margin header">
       <ion-row class="ion-justify-content-center">
-        <ion-col size="2" class="ion-text-center">
+        <ion-col size="1" class="ion-text-center">
           <img class="logo" src="../assets/images/logo.jpg">
         </ion-col>
-        <ion-col size="10" class="navbar-menu">
+        <ion-col size="11" class="navbar-menu">
           <ion-grid>
             <ion-row class="ion-align-items-center">
               <ion-col size="1" class="ion-text-center nav-header"  (click)="navigateTo('home')">
@@ -41,8 +41,9 @@
                   </button>
                   <div class="dropdown-content">
                     <a (click)="navigateTo('history')">GGA History</a>
-                    <a (click)="navigateTo('history/gothras')">Gothras</a>
-                    <a (click)="navigateTo('history/festivals')">Festivals</a>
+                    <a (click)="navigateTo('history/gor-history')">GOR History</a>
+                    <a (click)="navigateTo('history/gothras')">GOR Gothras</a>
+                    <a (click)="navigateTo('history/festivals')">GOR Festivals</a>
                   </div>
                 </div> 
                 <div class="dropdown">
@@ -58,8 +59,9 @@
                   <button (click)="navigateTo('contact')" class="dropbtn">Contact</button>
                 </div> 
               </ion-col>
-              <ion-col  size="1" class="ion-text-center nav-header" >
-                <ion-button color="secondary" (click)="checkForLogin()">Admin</ion-button>
+              <ion-col  size="2" class="ion-text-center nav-header" >
+                <ion-button class="admin-button" color="secondary" (click)="checkForLogin()">Admin</ion-button>
+                <ion-button color="secondary" (click)="donate()">Donate</ion-button>
               </ion-col>
             </ion-row>
           </ion-grid>

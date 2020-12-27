@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'festivals',
     component: FestivalsComponent
+  },
+  {
+    path: 'gor-history',
+    loadChildren: () => import('./gor-history/gor-history.module').then( m => m.GorHistoryPageModule)
   }
 ];
 

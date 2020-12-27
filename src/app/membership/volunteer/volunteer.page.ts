@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ModalController, ToastController } from '@ionic/angular';
+import { ModalController, NavController, ToastController } from '@ionic/angular';
 import { MembershipService } from '../membership.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { MembershipService } from '../membership.service';
 export class VolunteerPage implements OnInit {
 
   constructor(private memberService:MembershipService,
-    private toastCtrl:ToastController) { }
+    private toastCtrl:ToastController,
+    private navCtrl:NavController) { }
 
   volunteerForm:FormGroup;
   countries:string[] = [];
@@ -32,7 +33,7 @@ export class VolunteerPage implements OnInit {
       'country': new FormControl(null,[Validators.required]),
       'state': new FormControl(null,[Validators.required]),
       'city': new FormControl(null,[Validators.required]),
-      'zip': new FormControl(null,[Validators.required])
+      'zip': new FormControl(null)
     });
     this.volunteerForm.controls.state.disable();
   }
@@ -76,7 +77,7 @@ export class VolunteerPage implements OnInit {
     if(this.volunteerForm.valid){
       let volunteerRequest:any = {};
       volunteerRequest.title = this.volunteerForm.controls.title.value;
-      volunteerRequest.firstName = this.volunteerForm.controls.title.value;
+      volunteerRequest.firstName = this.volunteerForm.controls.firstName.value;
       volunteerRequest.lastName = this.volunteerForm.controls.lastName.value;
       volunteerRequest.email = this.volunteerForm.controls.email.value;
       volunteerRequest.phone = this.volunteerForm.controls.phone.value;
@@ -87,11 +88,13 @@ export class VolunteerPage implements OnInit {
       volunteerRequest.city = this.volunteerForm.controls.city.value;
       volunteerRequest.zip = this.volunteerForm.controls.zip.value;
       this.memberService.registerVolunteer(volunteerRequest).subscribe( () => {
+        this.volunteerForm.reset();
         this.toastCtrl.create({
           message:'Thank you for registering as a volunteer with GGA',
-          duration:2000
+          duration:3000
           }).then(toast => {
           toast.present();
+          this.navCtrl.navigateForward("/home");
           });
       });
       }

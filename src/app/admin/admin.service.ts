@@ -10,33 +10,26 @@ interface Newsdata {
 }
 
 interface Membership {
-  title:string,
   firstName:string,
   lastName:string,
   email:string,
   phone:string,
-  profession:string,
-  interestHobbies:string,
-  addressline1:string,
-  addressline2:string,
   country:string,
   state:string,
   city:string,
-  zip:string
+  countryOrigin:string,
+  stateOrigin:string,
+  cityOrigin:string
 }
 
 interface Volunteer {
-  title:string,
   firstName:string,
   lastName:string,
   email:string,
   phone:string,
-  profession:string,
-  interestHobbies:string,
   country:string,
   state:string,
-  city:string,
-  zip:string
+  city:string
 }
 
 @Injectable({
@@ -85,10 +78,9 @@ export class AdminService {
         const members = [];
         for(const key in resData){
           if(resData.hasOwnProperty(key)){
-            members.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,addressline1:resData[key].addressline1,addressline2:resData[key].addressline2,country:resData[key].country,state:resData[key].state,city:resData[key].city,zip:resData[key].zip});
+            members.push({id:key,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,country:resData[key].country,state:resData[key].state,city:resData[key].city,countryOrigin:resData[key].countryOrigin,stateOrigin:resData[key].stateOrigin,cityOrigin:resData[key].cityOrigin});
           }
         }
-        console.log(members);
         return members;
       })
     );
@@ -101,10 +93,9 @@ export class AdminService {
         const volunteers = [];
         for(const key in resData){
           if(resData.hasOwnProperty(key)){
-            volunteers.push({id:key,title:resData[key].title,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,profession:resData[key].profession,interestHobbies:resData[key].interestHobbies,country:resData[key].country,state:resData[key].state,city:resData[key].city,zip:resData[key].zip});
+            volunteers.push({id:key,firstName:resData[key].firstName,lastName:resData[key].lastName,email:resData[key].email,phone:resData[key].phone,country:resData[key].country,state:resData[key].state,city:resData[key].city});
           }
         }
-        console.log(volunteers);
         return volunteers;
       })
     );
