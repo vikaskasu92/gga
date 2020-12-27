@@ -1,33 +1,37 @@
 
     <ion-grid class="ion-no-margin header">
       <ion-row class="ion-justify-content-center">
-        <ion-col size="1" class="ion-text-center">
+        <ion-col size="2" class="ion-text-center">
           <img class="logo" src="../assets/images/logo.jpg">
         </ion-col>
         <ion-col size="10" class="navbar-menu">
           <ion-grid>
             <ion-row class="ion-align-items-center">
-              <ion-col class="ion-text-center nav-header"  (click)="navigateTo('home')">
+              <ion-col size="1" class="ion-text-center nav-header"  (click)="navigateTo('home')">
                 <ion-text>Home</ion-text>
               </ion-col>
-              <ion-col class="ion-text-center navbar-menu-decoration navbar-menu-item" >
+              <ion-col size="1" class="ion-text-center nav-header"  (click)="navigateTo('about')">
+                <ion-text>About</ion-text>
+              </ion-col>
+              <ion-col size="1" class="ion-text-center nav-header"  (click)="navigateTo('news')">
+                <ion-text>News</ion-text>
+              </ion-col>
+              <ion-col size="1" class="ion-text-center nav-header" (click)="navigateTo('gallery')">
+                <ion-text>Gallery</ion-text>
+              </ion-col>
+              <ion-col size="6" class="ion-text-center nav-header" >
                 <div class="dropdown">
-                  <button class="dropbtn">About 
+                  <button class="dropbtn">Leadership 
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-content">
-                    <a (click)="navigateTo('about')">About GGA</a>
-                    <a (click)="navigateTo('leadership')">Leadership</a>
+                    <a (click)="navigateTo('leadership/founders')">Founders</a>
+                    <a (click)="navigateTo('leadership/board-of-directors')">Board of Directors</a>
+                    <a (click)="navigateTo('leadership/executive-committee')">Executive Committee</a>
+                    <a (click)="navigateTo('leadership/advisory-committee')">Advisory Committee</a>
+                    <a (click)="navigateTo('leadership/other-committee')">Other Committee</a>
                   </div>
                 </div> 
-              </ion-col>
-              <ion-col  class="ion-text-center nav-header"  (click)="navigateTo('news')">
-                <ion-text>News & Events</ion-text>
-              </ion-col>
-              <ion-col  class="ion-text-center nav-header" (click)="navigateTo('gallery')">
-                <ion-text>Gallery</ion-text>
-              </ion-col>
-              <ion-col  class="ion-text-center navbar-menu-decoration navbar-menu-item" >
                 <div class="dropdown">
                   <button class="dropbtn">History 
                     <i class="fa fa-caret-down"></i>
@@ -38,8 +42,6 @@
                     <a (click)="navigateTo('history/festivals')">Festivals</a>
                   </div>
                 </div> 
-              </ion-col>
-              <ion-col  class="ion-text-center navbar-menu-decoration navbar-menu-item">
                 <div class="dropdown">
                   <button class="dropbtn">Member 
                     <i class="fa fa-caret-down"></i>
@@ -49,11 +51,11 @@
                     <a (click)="navigateTo('charity')">Donate</a>
                   </div>
                 </div> 
+                <div class="dropdown">
+                  <button (click)="navigateTo('contact')" class="dropbtn">Contact</button>
+                </div> 
               </ion-col>
-              <ion-col  class="ion-text-center nav-header"  (click)="navigateTo('contact')">
-                <ion-text>Contact</ion-text>
-              </ion-col>
-              <ion-col  class="ion-text-center nav-header" >
+              <ion-col  size="1" class="ion-text-center nav-header" >
                 <ion-button color="secondary" (click)="checkForLogin()">Admin</ion-button>
               </ion-col>
             </ion-row>
