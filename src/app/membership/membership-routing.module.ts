@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: MembershipPage
+  },
+  {
+    path: 'volunteer',
+    loadChildren: () => import('./volunteer/volunteer.module').then( m => m.VolunteerPageModule)
+  },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
   }
 ];
 

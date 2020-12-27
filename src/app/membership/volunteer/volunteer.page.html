@@ -1,0 +1,177 @@
+<app-header></app-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-text>
+        <h2>Volunteer with GGA TODAY</h2>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-text>
+        <h3>Let us join hands to address the needs of the GGA Community globally.</h3>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-card class="card-design">
+  <ion-card-content>
+    <form [formGroup]="volunteerForm" (ngSubmit)="volunteer()">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <mat-form-field class="form-field">
+              <mat-label>Title</mat-label>
+              <mat-select formControlName="title">
+                <mat-option value="mr">Mr.</mat-option>
+                <mat-option value="mr">Mrs.</mat-option>
+                <mat-option value="mr">Ms.</mat-option>
+                <mat-option value="mr">Miss.</mat-option>
+                <mat-option value="mr">Dr.</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="4">
+            <mat-form-field class="form-field">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName" required>
+              <mat-error *ngIf="!volunteerForm.get('firstName').valid && volunteerForm.get('firstName').touched">
+                Please enter a First Name
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="4">
+            <mat-form-field class="form-field" >
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName" required>
+              <mat-error *ngIf="!volunteerForm.get('lastName').valid && volunteerForm.get('lastName').touched">
+                Please enter a Last Name
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <mat-form-field class="form-field">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email" required>
+              <mat-error *ngIf="!volunteerForm.get('email').valid && volunteerForm.get('email').touched">
+                Please enter a valid email address
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="6">
+            <mat-form-field class="form-field">
+              <mat-label>Phone</mat-label>
+              <input matInput type="text" formControlName="phone" maxlength="10" pattern="^(0|[1-9][0-9]*)$" required>
+              <mat-error *ngIf="!volunteerForm.get('phone').valid && volunteerForm.get('phone').touched">
+                Please enter a phone number
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <mat-label>Which Place are you willing to Vollunteer ?</mat-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <mat-form-field class="form-field">
+              <mat-label>Country</mat-label>
+              <mat-select formControlName="country" (selectionChange)="countryChanged($event)"  required>
+                <mat-option  *ngFor="let country of countries" value="{{country}}">{{country}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="!volunteerForm.get('country').valid && volunteerForm.get('country').touched">
+                Please select a country
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="4"  class="multiple-selects">
+            <mat-form-field class="form-field">
+              <div *ngIf="!ukSelected && !middleEastSelected">
+                <mat-label>State</mat-label>
+              </div>
+              <div *ngIf="ukSelected || middleEastSelected">
+                <mat-label>Country</mat-label>
+              </div>
+              <mat-select formControlName="state" required>
+                <mat-option  *ngFor="let state of states" value="{{state}}">{{state}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="!volunteerForm.get('state').valid && volunteerForm.get('state').touched">
+                Please select a state
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="4">
+            <mat-form-field class="form-field">
+              <mat-label>City</mat-label>
+              <input matInput formControlName="city" required>
+              <mat-error *ngIf="!volunteerForm.get('city').valid && volunteerForm.get('city').touched">
+                Please enter a city name
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <mat-form-field class="form-field">
+              <mat-label>Zip</mat-label>
+              <input matInput formControlName="zip" maxlength="5" pattern="^(0|[1-9][0-9]*)$" required>
+              <mat-error *ngIf="!volunteerForm.get('zip').valid && volunteerForm.get('zip').touched">
+                Please enter a valid zip
+              </mat-error>
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="4">
+  
+          </ion-col>
+          <ion-col size="4">
+  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <mat-form-field class="form-field">
+              <mat-label>Interest /Hobbies</mat-label>
+              <input matInput formControlName="interestHobbies">
+            </mat-form-field>
+          </ion-col>
+          <ion-col size="6">
+            <mat-form-field class="form-field">
+              <mat-label>Profession</mat-label>
+              <input matInput formControlName="profession">
+            </mat-form-field>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid class="ion-text-center">
+        <ion-row class="ion-text-center">
+          <ion-col size="12">
+            <ion-button type="submit" color="primary">Volunteer</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-card-content>
+</ion-card>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <img class="logo-image" src="../../../assets/images/logo.jpg" alt="Logo">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <app-footer></app-footer>
+</ion-content>

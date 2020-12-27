@@ -8,11 +8,9 @@ import { MembershipPageRoutingModule } from './membership-routing.module';
 
 import { MembershipPage } from './membership.page';
 import { SharedModule } from '../shared/shared.module';
-import { RegisterComponent } from './register/register.component';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import { VolunteerComponent } from './volunteer/volunteer.component';
 
 @NgModule({
   imports: [
@@ -25,6 +23,6 @@ import { VolunteerComponent } from './volunteer/volunteer.component';
     MatInputModule,
     MatSelectModule
   ],
-  declarations: [MembershipPage,RegisterComponent,VolunteerComponent]
+  declarations: [MembershipPage]
 })
 export class MembershipPageModule {}
