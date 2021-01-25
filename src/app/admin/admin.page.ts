@@ -49,13 +49,16 @@ export class AdminPage implements OnInit, AfterViewInit {
       'date': new FormControl(null,[Validators.required])
     });
     let date = new Date().toLocaleDateString();
-    let month = date.substring(0,2);
+    let month = date.substring(0,1);
     if(month.length === 1){
       month = 0+month;
     }
-    let day = date.substring(3,5);
-    let year = date.substring(6,10);
-    this.today = year+'-'+month+'-'+day;
+    let day = date.substring(3,4);
+    if(day.length === 1){
+      day = 0+day;
+    }
+    let year = date.substring(5,10);
+    this.today = month+'/'+day+'/'+year;
     console.log(this.today)
   }
 
