@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import { NavController, PopoverController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,7 +10,8 @@ import { NavController, PopoverController } from '@ionic/angular';
 export class HeaderComponent implements OnInit {
 
   constructor(private navCtrl:NavController,
-              private router:Router) { }
+              private router:Router,
+              private menu: MenuController) { }
 
   ngOnInit() {}
   
@@ -25,6 +26,11 @@ export class HeaderComponent implements OnInit {
 
   donate(){
     window.open("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NAV4UMWXAA4B4&source=url","_blank");
+  }
+
+  toggleMenu(){
+    console.log("came to call menu")
+    this.menu.open('m1');
   }
 
 

@@ -1,3 +1,126 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-menu side="start" content-id="m1" >
+      <ion-header>
+        <ion-toolbar class="menu-background">
+          <ion-title>
+            GGA
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="menu-background">
+        <ion-list class="menu-background menu-background-padding">
+          <ion-menu-toggle >
+            <ion-item class="menu-item" routerLink="/home">
+              <ion-icon name="home-outline" slot="start"></ion-icon>
+              <ion-label>Home</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item class="menu-item"  routerLink="/about">
+              <ion-icon name="reader-outline" slot="start"></ion-icon>
+              <ion-label>About</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/gallery">
+              <ion-icon name="images-outline" slot="start"></ion-icon>
+              <ion-label>Gallery</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/news">
+              <ion-icon name="newspaper-outline" slot="start"></ion-icon>
+              <ion-label>News</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/charity">
+              <ion-icon name="cash-outline" slot="start"></ion-icon>
+              <ion-label>Charity</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/leadership/founders">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Leadership - Founders</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/leadership/board-of-directors">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Leadership - Board of Directors</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/leadership/executive-committee">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Leadership - Executive Committee</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/leadership/advisory-committee">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Leadership - Advisory Committee</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/leadership/other-committee">
+              <ion-icon name="people-outline" slot="start"></ion-icon>
+              <ion-label>Leadership - Other Committee</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/history">
+              <ion-icon name="file-tray-full-outline" slot="start"></ion-icon>
+              <ion-label>GGA History</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/history/gor-history">
+              <ion-icon name="file-tray-full-outline" slot="start"></ion-icon>
+              <ion-label>GOR History</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/history/gothras">
+              <ion-icon name="file-tray-full-outline" slot="start"></ion-icon>
+              <ion-label>GOR Gothras</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/history/festivals">
+              <ion-icon name="file-tray-full-outline" slot="start"></ion-icon>
+              <ion-label>GOR Festivals</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/membership/registration">
+              <ion-icon name="person-add-outline" slot="start"></ion-icon>
+              <ion-label>GGA Membership</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/membership/volunteer">
+              <ion-icon name="person-add-outline" slot="start"></ion-icon>
+              <ion-label>GGA Volunteer</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" routerLink="/contact">
+              <ion-icon name="call-outline" slot="start"></ion-icon>
+              <ion-label>Contact</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-menu-toggle >
+            <ion-item  class="menu-item" (click)="checkForLogin()">
+              <ion-icon name="power-outline" slot="start"></ion-icon>
+              <ion-label>Admin</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="m1"></ion-router-outlet>
+  </ion-content>
 </ion-app>
