@@ -7,18 +7,22 @@ import { IonicModule } from '@ionic/angular';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DatePipe } from './pipe/date.pipe';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule
+    IonicModule,
+    FlexLayoutModule,
+    FlexLayoutModule
   ],
   declarations: [HeaderComponent,FooterComponent, DatePipe],
   exports: [
     HeaderComponent,
     FooterComponent,
-    DatePipe
+    DatePipe,
+    FlexLayoutModule
   ]
 })
 export class SharedModule {}

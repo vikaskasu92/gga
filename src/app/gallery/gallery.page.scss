@@ -7,10 +7,56 @@
 }
 
 .slides{
-    height: 29rem;
+    height: 31rem;
 }
 
 .videos{
-    width:30vw;
-    padding-left: 3rem;
+    width:100%;
+    &-row{
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+
+//Mobile
+
+/* iphone 10 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .slides{
+        height: 14rem !important;
+    }
+    
+
+}
+
+/* iphone 6, 6s, 7 & 8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .slides{
+        height: 14rem !important;
+    }
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+/* desktop */
+@media screen 
+  and (min-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+      .slide-image{
+          transform: scale(2);
+      }
 }

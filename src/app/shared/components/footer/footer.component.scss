@@ -1,20 +1,4 @@
-.footer{
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    border-radius: 0;
 
-    &-coloum{
-        padding: 1rem;
-        padding-top: 3rem;
-        padding-left: 3rem;
-    }
-
-    &-heading{
-        font-weight: bold;
-    }
-}
 
 .inner-padding{
     padding-left: 1.5rem;
@@ -22,4 +6,18 @@
 
 .clickable{
     cursor: pointer;
+}
+
+ion-card{
+    margin: 0;
+    margin-top: 1rem;
+}
+
+ion-text{
+    color: white !important;
+  }
+
+.footer-heading{
+    font-weight: bolder;
+    font-size: 1rem;
 }

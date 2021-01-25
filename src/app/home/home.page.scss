@@ -9,17 +9,13 @@
 .hero{
     height: 85vh;
     background-image:url('../../assets/images/hero.jpg');
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
     margin-right: .2rem;
     margin-left: .2rem;
 }
 
-.nayak-image{
-    height: 26vh;
-    width: 21vw;
-}
 
 .card-adjust{
     margin-right: 4rem !important;
@@ -34,6 +30,10 @@
 .bottom-card{
     margin: 1.2rem;
     margin-bottom:2rem;
+}
+
+.news-content{
+    margin-top: 1rem;
 }
 
 .padding{
@@ -85,4 +85,49 @@
 
 .middle-card{
     margin: 1.2rem;
+}
+
+//Mobile
+
+/* iphone 10 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+    .hero{
+        display: none !important;
+    }
+    
+
+}
+
+/* iphone 6, 6s, 7 & 8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .hero{
+        display: none !important;
+    }
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .hero{
+        display: none !important;
+    }
+
+    .nayak-image{
+        margin-top: 3rem;
+    }
+}
+
+/* desktop */
+@media screen 
+  and (min-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
 }

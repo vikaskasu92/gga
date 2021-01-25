@@ -1,12 +1,13 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-card class="card">
-    <ion-card-content>
-      <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12" class="ion-text-center">
+<div fxLayout="row" fxLayout.xs="column" >
+  <div fxFlex="97" class="layout-flex-col">
+    <ion-card>
+      <ion-card-content>
+        <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
+          <div fxLayout="row" fxLayout.xs="column" >
+            <div fxFlex="100" class="layout-flex-col">
               <mat-form-field class="form-field">
                 <mat-label>Name</mat-label>
                 <input matInput type="text" name="name" formControlName="name" required>
@@ -14,12 +15,10 @@
                   Please enter a name
                 </mat-error>
               </mat-form-field>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12" class="ion-text-center">
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" >
+            <div fxFlex="100" class="layout-flex-col">
               <mat-form-field class="form-field">
                 <mat-label>Email</mat-label>
                 <input matInput type="email" name="email" formControlName="email" required>
@@ -27,12 +26,10 @@
                   Please enter a valid email address
                 </mat-error>
               </mat-form-field>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12" class="ion-text-center">
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" >
+            <div fxFlex="100" class="layout-flex-col">
               <mat-form-field class="form-field">
                 <mat-label>Message</mat-label>
                 <textarea matInput type="message" name="message" formControlName="message" required></textarea>
@@ -40,18 +37,21 @@
                   Please enter a message
                 </mat-error>
               </mat-form-field>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12" class="ion-text-center">
-              <ion-button type="submit" color="secondary">Contact GGA</ion-button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </form>
-    </ion-card-content>
-  </ion-card>
+            </div>
+          </div>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                <ion-button type="submit" color="secondary">Contact GGA</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</div>
+
+  
   <app-footer class="footer"></app-footer>
 </ion-content>

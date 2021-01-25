@@ -25,10 +25,8 @@
 }
 
 .charity-images{
-    margin-left: 5rem;
-    height: 35vh;
+    width: 100%;
     border-radius: 1rem;
-    width: 78%;
 }
 
 .col-padding{
@@ -38,4 +36,77 @@
 .bottom-card{
     margin: 1.2rem;
     margin-bottom:2rem;
+}
+
+//Mobile
+
+/* iphone 10 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .charity-images{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 33rem;
+    }
+
+}
+
+/* iphone 6, 6s, 7 & 8 */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .charity-images{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 33rem;
+    }
+}
+
+/* ipad */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .student-charity{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 11rem;
+    }
+}
+
+/* desktop */
+@media screen 
+  and (min-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .student-charity{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 31rem;
+    }
+}
+
+@media screen 
+  and (min-device-width: 1440px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .student-charity{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 23.3rem;
+    }
+}
+
+@media screen 
+  and (min-device-width: 2560px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .student-charity{
+        width: 100%;
+        border-radius: 1rem;
+        max-height: 43rem;
+    }
 }

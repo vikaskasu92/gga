@@ -1,132 +1,146 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-card class="top-card card-adjust">
-    <ion-card-header class="ion-padding-start">
-      <ion-card-title class="ion-padding-start">
-        <ion-text color="primary" class="card-heading">Charity 2020</ion-text>
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="padding ion-text-justify">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-            <ion-text>
-              1. GGA Helped  230+ Gor families with temporary survival kit which includes(Flour, Rice, Sugar, Oil, Salt, Turmeric, Chilli and Dal) during COVID-19 in Mumbai,Maharashtra .
-              -These families are mostly from Telangana, Andhra, Maharashtra and Karnataka state who are stranded into Mumbai suburbs due to COVID-19 lockdown on Apr 12, 2020.<br>
-              &nbsp;<strong>Details of the distribution:</strong><br>
-              &nbsp;&nbsp;&nbsp;Indira Nagar – 38 families<br>
-              &nbsp;&nbsp;&nbsp;Shreyas Park – 32 families<br>
-              &nbsp;&nbsp;&nbsp;Shastrinagar  --- 80 families<br>
-              &nbsp;&nbsp;&nbsp;Bogaras Vikarabad  --- 20 families<br>
-              &nbsp;&nbsp;&nbsp;Basavkalyan – film city, Bharath nagar, Bandra  --- 65 families<br>
-              2.Distributed food items and daily essentials to 25 Gor families from Telangana and Karnataka state who are stranded in Mumbai on Apr 15, 2020.<br>
-              3.	Distributed food items and daily essentials to 17 Gor families from Karnataka state who are stranded in Mumbai on Apr 17, 2020.<br>
-              4.	Distributed food items and daily essentials to 50 Gor families from Karnataka state who are stranded in Nalasopara Area, Mumbai on Apr 21, 2020.<br>
-              5.	Distributed food items and daily essentials to 40 Gor families from Telangana state who are stranded in Dombivali , Mumbai on Apr 22, 2020.<br>
-              6.	Distributed food items and daily essentials to 80 Gor families from Telangana state who are stranded in Nehru Nagar1 and Nehru Nagar2 , Mumbai on Apr 26, 2020.<br>
-            </ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  <ion-card class="top-card card-adjust">
-    <ion-card-header class="ion-padding-start">
-      <ion-card-title class="ion-padding-start">
-        <ion-text color="primary" class="card-heading">Charity 2019</ion-text>
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="padding ion-text-justify">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-            <ion-text>
-              1. GGA Donated 5 High end computers for Raisina Study center, Gadag, Karnataka 
-            </ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  <ion-card class="top-card card-adjust">
-    <ion-card-header class="ion-padding-start">
-      <ion-card-title class="ion-padding-start">
-        <ion-text color="primary" class="card-heading">Charity 2018</ion-text>
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="padding ion-text-justify">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12">
-            <ion-text>
-              1. GGA contributed  Monitory help to Nivas Maloth to perceive his education dream <br>
-              2. GGA held Students felicitation program on 15 July 2018 at Indore, Madhya Pradesh.
-            </ion-text>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  <ion-card class="top-card card-adjust">
-    <ion-card-header class="ion-padding-start">
-      <ion-card-title class="ion-padding-start">
-        <ion-text color="primary" class="card-heading">Adopt a Village and Support your Motherland</ion-text>
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="padding ion-text-justify">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="8" class="col-padding">
-            <ion-text class="paragraph">
-              Donate to GGA and Adopt a Village
-             </ion-text>
-          </ion-col>
-          <ion-col size="4">
-            <img class="charity-images" src="../../assets/images/village-1.jpg" alt="Donate Village image">
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-     
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-button color="secondary" (click)="donateToGGA()">Donate</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex="97" class="layout-flex-col">
+      <ion-card >
+        <ion-card-header class="ion-padding-start">
+          <ion-card-title class="ion-padding-start">
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+              <div fxFlex="100" class="layout-flex-col">
+                <ion-text color="primary" class="card-heading">Charity 2020</ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="padding ion-text-justify">
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <ion-text class="text">
+                1. GGA Helped  230+ Gor families with temporary survival kit which includes(Flour, Rice, Sugar, Oil, Salt, Turmeric, Chilli and Dal) during COVID-19 in Mumbai,Maharashtra .
+                -These families are mostly from Telangana, Andhra, Maharashtra and Karnataka state who are stranded into Mumbai suburbs due to COVID-19 lockdown on Apr 12, 2020.<br>
+                <strong>Details of the distribution:</strong><br>
+                &nbsp;&nbsp;&nbsp;Indira Nagar – 38 families<br>
+                &nbsp;&nbsp;&nbsp;Shreyas Park – 32 families<br>
+                &nbsp;&nbsp;&nbsp;Shastrinagar  --- 80 families<br>
+                &nbsp;&nbsp;&nbsp;Bogaras Vikarabad  --- 20 families<br>
+                &nbsp;&nbsp;&nbsp;Basavkalyan – film city, Bharath nagar, Bandra  --- 65 families<br><br>
+                2.Distributed food items and daily essentials to 25 Gor families from Telangana and Karnataka state who are stranded in Mumbai on Apr 15, 2020.<br><br>
+                3.	Distributed food items and daily essentials to 17 Gor families from Karnataka state who are stranded in Mumbai on Apr 17, 2020.<br><br>
+                4.	Distributed food items and daily essentials to 50 Gor families from Karnataka state who are stranded in Nalasopara Area, Mumbai on Apr 21, 2020.<br><br>
+                5.	Distributed food items and daily essentials to 40 Gor families from Telangana state who are stranded in Dombivali , Mumbai on Apr 22, 2020.<br><br>
+                6.	Distributed food items and daily essentials to 80 Gor families from Telangana state who are stranded in Nehru Nagar1 and Nehru Nagar2 , Mumbai on Apr 26, 2020.<br><br>
+              </ion-text>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex="97" class="layout-flex-col">
+      <ion-card>
+        <ion-card-header class="ion-padding-start">
+          <ion-card-title class="ion-padding-start">
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+              <div fxFlex="100" class="layout-flex-col">
+                <ion-text color="primary" class="card-heading">Charity 2019</ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="padding ion-text-justify">
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <ion-text class="text">
+                1. GGA Donated 5 High end computers for Raisina Study center, Gadag, Karnataka 
+              </ion-text>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex="97" class="layout-flex-col">
+      <ion-card >
+        <ion-card-header class="ion-padding-start">
+          <ion-card-title class="ion-padding-start">
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+              <div fxFlex="100" class="layout-flex-col">
+                <ion-text color="primary" class="card-heading">Charity 2018</ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="padding ion-text-justify">
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <ion-text class="text">
+                1. GGA contributed  Monitory help to Nivas Maloth to perceive his education dream <br><br>
+                2. GGA held Students felicitation program on 15 July 2018 at Indore, Madhya Pradesh.
+              </ion-text>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 
-  <ion-card class="bottom-card card-adjust">
-    <ion-card-header class="ion-padding-start">
-      <ion-card-title class="ion-padding-start">
-        <ion-text color="primary" class="card-heading">Adopt a Student</ion-text>
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="padding ion-text-justify">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="8" class="col-padding">
-            <ion-text class="paragraph">
-              Donate to GGA and adopt a Student
-             </ion-text>
-          </ion-col>
-          <ion-col size="4">
-            <img class="charity-images" src="../../assets/images//student-1.jpg" alt="Donate Student image">
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-     
-      <ion-grid>
-        <ion-row>
-          <ion-col class="ion-text-center">
-            <ion-button color="secondary" (click)="donateToGGA()">Donate</ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+    <div fxFlex="50" class="layout-flex-col">
+      <ion-card >
+        <ion-card-header class="ion-padding-start">
+          <ion-card-title class="ion-padding-start">
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+              <div fxFlex="100" class="layout-flex-col">
+                <ion-text color="primary" class="card-heading">Adopt a Village</ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="padding ion-text-justify">
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <img class="charity-images" src="../../assets/images/village-1.jpg" alt="Donate Village image">
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+            <div fxFlex="100" class="layout-flex-col ion-text-center">
+              <ion-button color="secondary" (click)="donateToGGA()">Donate</ion-button>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div fxFlex="50" class="layout-flex-col">
+      <ion-card >
+        <ion-card-header class="ion-padding-start">
+          <ion-card-title class="ion-padding-start">
+            <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+              <div fxFlex="100" class="layout-flex-col">
+                <ion-text color="primary" class="card-heading">Adopt a Student</ion-text>
+              </div>
+            </div>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="padding ion-text-justify">
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <img class="charity-images student-charity" src="../../assets/images/student-donate.jpg" alt="Donate Student image">
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.md="column">
+            <div fxFlex="100" class="layout-flex-col ion-text-center">
+              <ion-button color="secondary" (click)="donateToGGA()">Donate</ion-button>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 
   <app-footer></app-footer>
 </ion-content>

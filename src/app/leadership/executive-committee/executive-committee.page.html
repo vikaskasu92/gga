@@ -1,126 +1,133 @@
 <app-header></app-header>
 
 <ion-content>
-  <ion-card class="ion-margin-top main-card">
-    <ion-card-header>
-      <ion-text color="primary" class="card-heading">Executives Committee</ion-text>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img class="leader-image" src="../../../assets/images/Kalidas-Porika.png" alt="Kalidas-Porkya">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Kalidas Porikya</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>President</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>          
-          </ion-col>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img class="leader-image" src="../../../assets/images/Dr Girish Mood.png" alt="Dr Girish Mood">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Dr Girish Mood</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>Vice President</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img  class="leader-image" src="../../../assets/images/Ravikiran-Chauhan.png" alt="Ravikiran-Chauhan">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Ravikiran Sabavath</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>Vice President</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img class="leader-image" src="../../../assets/images/Sandip-Rathod.png" alt="Sandip-Rathod">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Sandeep Rathod</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>Vice President</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img class="leader-image" src="../../../assets/images/Shankar-Salavath.png" alt="Shanker Salavath">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Shanker Salavath</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>General Secretary</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>          
-          </ion-col>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img class="leader-image" src="../../../assets/images/Ashok-Angoth.png" alt="Ashok Angoth">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Ashok Angoth</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>Joint Secretary</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="3">
-            <ion-card>
-              <ion-card-header>
-                <img  class="leader-image" src="../../../assets/images/Arvind-Chavan.png" alt="Arvind Chavan">
-              </ion-card-header>
-              <ion-card-content class="ion-text-center">
-                <ion-card-subtitle>
-                  <ion-text>Arvind Chavan</ion-text>
-                </ion-card-subtitle>
-                <ion-card-title>
-                  <ion-text>Treasurer</ion-text>
-                </ion-card-title>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="3">
-            
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex="97" class="layout-flex-col">
+      <ion-card >
+        <ion-card-header>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="97" class="layout-flex-col">
+              <ion-text color="primary" class="card-heading">Executives Committee</ion-text>
+            </div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img class="leader-image" src="../../../assets/images/Kalidas-Porika.png" alt="Kalidas-Porkya">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Kalidas Porikya</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>President</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>  
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img class="leader-image" src="../../../assets/images/Dr Girish Mood.png" alt="Dr Girish Mood">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Dr Girish Mood</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>Vice President</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img  class="leader-image" src="../../../assets/images/Ravikiran-Chauhan.png" alt="Ravikiran-Chauhan">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Ravikiran Sabavath</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>Vice President</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img class="leader-image" src="../../../assets/images/Sandip-Rathod.png" alt="Sandip-Rathod">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Sandeep Rathod</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>Vice President</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">  
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img class="leader-image" src="../../../assets/images/Shankar-Salavath.png" alt="Shanker Salavath">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Shanker Salavath</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>General Secretary</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>        
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img class="leader-image" src="../../../assets/images/Ashok-Angoth.png" alt="Ashok Angoth">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Ashok Angoth</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>Joint Secretary</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+              <ion-card>
+                <ion-card-header class="ion-text-center">
+                  <img  class="leader-image" src="../../../assets/images/Arvind-Chavan.png" alt="Arvind Chavan">
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <ion-card-subtitle>
+                    <ion-text>Arvind Chavan</ion-text>
+                  </ion-card-subtitle>
+                  <ion-card-title>
+                    <ion-text>Treasurer</ion-text>
+                  </ion-card-title>
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="25" class="layout-flex-col">
+
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
   <app-footer></app-footer>
 </ion-content>

@@ -1,67 +1,71 @@
 <app-header></app-header>
 <ion-content>
-  <ion-card class="bottom-card">
-    <ion-card-header>
-      <ion-text color="primary" class="card-heading">GOR Festivals</ion-text>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title color="secondary">
-                  Teej Festival
-                </ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                <ion-img src="../../assets/images/gallery7.png"></ion-img>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="6">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title color="secondary">
-                  Seethla Bhavani
-                </ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                <ion-img src="../../assets/images/gallery2.png"></ion-img>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title color="secondary">
-                  Manthraal Festival
-                </ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                <ion-img src="../../assets/images/gallery8.png"></ion-img>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-          <ion-col size="6">
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title color="secondary">
-                  Sevalal Maharaj Jayanthi Bhavani
-                </ion-card-title>
-              </ion-card-header>
-              <ion-card-content>
-                <ion-img src="../../assets/images/gallery11.png"></ion-img>
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+    <div fxFlex="97" class="layout-flex-col">
+      <ion-card>
+        <ion-card-header>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="100" class="layout-flex-col">
+              <ion-text color="primary" class="card-heading">GOR Festivals</ion-text>
+            </div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="50" class="layout-flex-col">
+              <ion-card class="inner-card">
+                <ion-card-header>
+                  <ion-card-title color="secondary">
+                    Teej Festival
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <img class="festival-image" src="../../assets/images/gallery7.png">
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="50" class="layout-flex-col">
+              <ion-card class="inner-card">
+                <ion-card-header>
+                  <ion-card-title color="secondary">
+                    Seethla Bhavani
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <img class="festival-image" src="../../assets/images/gallery2.png">
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column">
+            <div fxFlex="50" class="layout-flex-col">
+              <ion-card class="inner-card">
+                <ion-card-header>
+                  <ion-card-title color="secondary">
+                    Manthraal Festival
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <img  class="festival-image" src="../../assets/images/gallery8.png">
+                </ion-card-content>
+              </ion-card>
+            </div>
+            <div fxFlex="50" class="layout-flex-col">
+              <ion-card class="inner-card">
+                <ion-card-header>
+                  <ion-card-title color="secondary">
+                    Sevalal Maharaj Jayanthi Bhavani
+                  </ion-card-title>
+                </ion-card-header>
+                <ion-card-content class="ion-text-center">
+                  <img class="festival-image" src="../../assets/images/gallery11.png">
+                </ion-card-content>
+              </ion-card>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
   <app-footer></app-footer>
 </ion-content>
