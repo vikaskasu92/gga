@@ -33,8 +33,8 @@ export class AdminPage implements OnInit, AfterViewInit {
   volunteers:boolean;
   noVolunteers:boolean;
   noMembers:boolean;
-  displayedColumnsVolunteers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city'];
-  displayedColumnsMembers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city','countryOrigin','stateOrigin','cityOrigin'];
+  displayedColumnsVolunteers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city','action'];
+  displayedColumnsMembers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city','countryOrigin','stateOrigin','cityOrigin','action'];
   volunteerSource: MatTableDataSource<any>;
   memberSource: MatTableDataSource<any>;
 
@@ -186,6 +186,26 @@ export class AdminPage implements OnInit, AfterViewInit {
     },error => {
       this.spinner = false;
       this.noMembers = true;
+      if(error.statusText === "Unauthorized"){
+        this.router.navigateByUrl('/login');
+      }
+    });
+  }
+
+  deleteVolunteer(id:string){
+    this.adminService.deleteVolunteersOnDB(id).subscribe( resData => {
+      this.fetchVolunteers();
+    },error => {
+      if(error.statusText === "Unauthorized"){
+        this.router.navigateByUrl('/login');
+      }
+    });
+  }
+
+  deleteMember(id:string){
+    this.adminService.deleteMembersOnDB(id).subscribe( resData => {
+      this.fetchMembers();
+    },error => {
       if(error.statusText === "Unauthorized"){
         this.router.navigateByUrl('/login');
       }

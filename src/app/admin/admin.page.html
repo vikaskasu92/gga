@@ -160,6 +160,11 @@
           <td mat-cell *matCellDef="let row" class="border"> {{row.city}} </td>
         </ng-container>
 
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Edit </th>
+          <td mat-cell *matCellDef="let row" class="border"> <ion-button (click)="deleteVolunteer(row.id)"><ion-icon name="trash-outline"></ion-icon></ion-button> </td>
+        </ng-container>
+
         <tr mat-header-row *matHeaderRowDef="displayedColumnsVolunteers"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumnsVolunteers;"></tr>
     
@@ -234,6 +239,11 @@
         <ng-container matColumnDef="cityOrigin">
           <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> City Origin</th>
           <td mat-cell *matCellDef="let row" class="border"> {{row.cityOrigin}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> Edit </th>
+          <td mat-cell *matCellDef="let row" class="border"> <ion-button (click)="deleteMember(row.id)"><ion-icon name="trash-outline"></ion-icon></ion-button> </td>
         </ng-container>
     
         <tr mat-header-row *matHeaderRowDef="displayedColumnsMembers"></tr>
