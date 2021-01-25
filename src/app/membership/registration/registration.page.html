@@ -103,7 +103,7 @@
                 <mat-form-field class="form-field">
                   <mat-label>Country of Residence</mat-label>
                   <mat-select formControlName="country" (selectionChange)="countryChanged($event)" required>
-                    <mat-option *ngFor="let country of countries" value="{{country}}">{{country}}</mat-option>
+                    <mat-option *ngFor="let country of countriesResidence" value="{{country}}">{{country}}</mat-option>
                   </mat-select>
                   <mat-error *ngIf="!registerForm.get('country').valid && registerForm.get('country').touched">
                     Please enter a country of residence

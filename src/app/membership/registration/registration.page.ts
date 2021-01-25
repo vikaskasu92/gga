@@ -16,6 +16,7 @@ export class RegistrationPage implements OnInit {
 
   registerForm:FormGroup;
   countries:string[] = [];
+  countriesResidence:string[] = [];
   states:string[] = [];
   Originstates:string[] = [];
   ukSelected:boolean = false;
@@ -24,6 +25,7 @@ export class RegistrationPage implements OnInit {
   middleEastOriginSelected:boolean = false;
 
   ngOnInit() {
+    this.countriesResidence = this.memberService.countriesWithoutIndia;
     this.countries = this.memberService.countries;
     this.registerForm = new FormGroup({
       'title': new FormControl(null),
