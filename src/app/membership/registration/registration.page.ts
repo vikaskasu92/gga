@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ModalController, NavController, ToastController } from '@ionic/angular';
+import { ContactService } from 'src/app/contact/contact.service';
 import { MembershipService } from '../membership.service';
 
 @Component({
@@ -12,7 +13,8 @@ export class RegistrationPage implements OnInit {
 
   constructor(private memberService:MembershipService,
     private toastCtrl:ToastController,
-    private navCtrl:NavController) { }
+    private navCtrl:NavController,
+    private contactService: ContactService) { }
 
   registerForm:FormGroup;
   countries:string[] = [];
@@ -139,7 +141,11 @@ export class RegistrationPage implements OnInit {
       registerRequest.cityOrigin = this.registerForm.controls.cityOrigin.value;
       registerRequest.zip = this.registerForm.controls.zip.value;
       this.memberService.registerMember(registerRequest).subscribe( () => {
-        this.registerForm.reset();
+        let contactGGARequest:any = {};
+        contactGGARequest.name= this.registerForm.controls.firstName.value + this.registerForm.controls.lastName.value;
+        contactGGARequest.email= this.registerForm.controls.email.value;
+        contactGGARequest.message= this.registerForm.controls.firstName.value + this.registerForm.controls.lastName.value +" has registered with GGA" ;
+        this.contactService.contactGGA(contactGGARequest).subscribe( contactedGGA => {});
         this.toastCtrl.create({
           message:'Thank you for being a member with GGA',
           duration:3000
@@ -148,6 +154,7 @@ export class RegistrationPage implements OnInit {
           this.navCtrl.navigateForward("/home");
         });
       });
+      this.registerForm.reset();
     }
   }
 
