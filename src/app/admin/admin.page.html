@@ -120,6 +120,11 @@
     <div class="mat-elevation-z8 table-display">
       <table mat-table [dataSource]="volunteerSource" matSort>
     
+        <ng-container matColumnDef="sno">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> S.NO </th>
+          <td mat-cell *matCellDef="let row let i = index;" class="border"> {{i+1}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="firstName">
           <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> First Name </th>
           <td mat-cell *matCellDef="let row" class="border"> {{row.firstName}} </td>
@@ -175,6 +180,11 @@
     
     <div class="mat-elevation-z8 table-display">
       <table mat-table [dataSource]=" memberSource" matSort>
+
+        <ng-container matColumnDef="sno">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> S.NO </th>
+          <td mat-cell *matCellDef="let row let i = index;" class="border" > {{i+1}} </td>
+        </ng-container>
     
         <ng-container matColumnDef="firstName">
           <th mat-header-cell *matHeaderCellDef mat-sort-header  class="centre"> First Name </th>

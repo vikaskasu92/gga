@@ -33,8 +33,8 @@ export class AdminPage implements OnInit, AfterViewInit {
   volunteers:boolean;
   noVolunteers:boolean;
   noMembers:boolean;
-  displayedColumnsVolunteers: string[] = ['firstName', 'lastName','email','phone','country','state','city'];
-  displayedColumnsMembers: string[] = ['firstName', 'lastName','email','phone','country','state','city','countryOrigin','stateOrigin','cityOrigin'];
+  displayedColumnsVolunteers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city'];
+  displayedColumnsMembers: string[] = ['sno','firstName', 'lastName','email','phone','country','state','city','countryOrigin','stateOrigin','cityOrigin'];
   volunteerSource: MatTableDataSource<any>;
   memberSource: MatTableDataSource<any>;
 
